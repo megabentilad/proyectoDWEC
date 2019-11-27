@@ -1,12 +1,6 @@
 function enviarColor(){
-    if(event.data === "letras"){
-        console.log(window.opener.document);
-        window.opener.document.body.style.color = this.style.backgroundColor;
-        
-    }else{
-        
-    }
-    //window.close();
+    window.opener.postMessage(this.style.backgroundColor,'*');
+    window.close();
 }
 
 function cargar(){
@@ -14,6 +8,7 @@ function cargar(){
     for(var i=0; i<colores.length; i++){
         colores[i].addEventListener('click',enviarColor,false);
     } 
+    window.opener.postMessage('cargado','*');
 }
 
 window.addEventListener('load',cargar,false);

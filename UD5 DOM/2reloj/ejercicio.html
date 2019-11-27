@@ -17,11 +17,21 @@
                 margin: auto;
             }
             #marco{
-                width: 150px;
-                height: 150px;
+                width: 180px;
+                height: 180px;
                 border-radius: 100%;
                 border: 2px solid black;
                 margin: auto;
+            }
+            #centro{
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                background-color: black;
+                position: relative;
+                left: 48%;
+                top: 10px;
+                
             }
             #aguja{
                 width: 2px;
@@ -29,7 +39,8 @@
                 background-color: black;
                 position: relative;
                 left: 50%;
-                transform: rotateZ(90deg);
+                top: 15px;
+
             }
         </style>
     </head>
@@ -51,6 +62,7 @@ Usa un botón para empezar y otros para finalizar
         <br/>
         <div id="marco">
             <div id="aguja"></div>
+            <div id="centro"></div>
         </div>
         <br/>
         <br/>

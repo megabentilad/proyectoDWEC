@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../../webroot/css/styles.css" media="screen">
+        <link rel="icon" type="image/png" href="../../../../mifavicon.png">
+        <script type="text/javascript" src="JavaScript/validaciones.js">
+        </script>
+        <script type="text/javascript" src="JavaScript/script.js">
+        </script>
+        <style>
+            form{
+                width: 50%;
+                margin: auto;
+            }
+            fieldset input{
+
+            }
+            fieldset p{
+                color: red;
+            }
+        </style>
+    </head>
+    <body onload="empezarFuncion()">
+        <h1>
+            Formulario simple
+        </h1>
+        <p>
+            Crea un formulario que conste de los siguientes campos: nombre, apellidos, email, radio con masculino o femenino y checkbox aficiones con las siguientes opciones:
+        </p>
+        <pre>
+Viajes, deportes, cine, 
+libros, música, automóviles, 
+videojuegos, gastronomía, belleza, tecnología
+ 
+Usando el evento onsubmit, realiza la validación para: 
+    • Comprobar y validar usando la plantilla del formulario anterior. 
+    • Comprobar que esté seleccionado uno de los dos radio. 
+    • Comprobar que se haya elegido al menos 3 aficiones
+
+Haz una archivo javascript donde llames a cada validación. 
+        </pre>
+        <br/>
+        <form action="ejercicio.html" method="post" accept-charset="UTF-8" name="formulario" id="formulario" enctype="application/x-www-form-urlencoded" target="_blank" onsubmit="return validar()">
+            <fieldset>
+                <legend>Datos personales: </legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nompre" id="nombre" placeholder="Introduce tu nombre">
+                <br/>
+                <br/>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Introduce tus apellidos">
+                <br/>
+                <br/>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="Introduce tu Email">
+                <br/>
+                <br/>
+                <input type="radio" name="genero" id="hombre" value="Hombre">
+                <label for="hombre">Hombre</label>
+                <br/>
+                <input type="radio" name="genero" id="mujer" value="Mujer">
+                <label for="mujer">Mujer</label>
+                <br/>
+                <input type="radio" name="genero" id="otro" value="Otro">
+                <label for="otro">Otro</label>
+                <br/>
+                <br/>
+                <label>Aficiones:</label>
+                <br/>
+                <input type="checkbox" name="aficion[viajes]" id="viajes" value="viajes">
+                <label for="viajes">Viajes</label>
+                <input type="checkbox" name="aficion[deportes]" id="deportes" value="deportes">
+                <label for="deportes">Deportes</label>
+                <input type="checkbox" name="aficion[cine]" id="cine" value="cine">
+                <label for="cine">Cine</label>
+                <br/>
+                <input type="checkbox" name="aficion[libros]" id="libros" value="libros">
+                <label for="libros">Libros</label>
+                <input type="checkbox" name="aficion[musica]" id="musica" value="musica">
+                <label for="musica">Música</label>
+                <input type="checkbox" name="aficion[automoviles]" id="automoviles" value="automoviles">
+                <label for="automoviles">Automóviles</label>
+                <br/>
+                <input type="checkbox" name="aficion[videojuegos]" id="videojuegos" value="videojuegos">
+                <label for="videojuegos">Videojuegos</label>
+                <input type="checkbox" name="aficion[gastronomia]" id="gastronomia" value="gastronomia">
+                <label for="gastronomia">Gastronomía</label>
+                <input type="checkbox" name="aficion[belleza]" id="belleza" value="belleza">
+                <label for="belleza">Belleza</label>
+                <input type="checkbox" name="aficion[tecnologia]" id="tecnologia" value="tecnologia">
+                <label for="tecnologia">Tecnología</label>
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+        <footer>
+            <p>
+                <a href="../../../..">
+                    © Luis Mateo Rivera Uriarte 2019-2020
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

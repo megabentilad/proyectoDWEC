@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../../webroot/css/styles.css" media="screen">
+        <link rel="icon" type="image/png" href="../../../../mifavicon.png">
+        <script type="text/javascript" src="JavaScript/validaciones.js">
+        </script>
+        <script type="text/javascript" src="JavaScript/script.js">
+        </script>
+        <style>
+            form{
+                width: 30%;
+                margin: auto;
+            }
+            fieldset input{
+                width: 50%;
+            }
+            fieldset p{
+                color: red;
+            }
+        </style>
+    </head>
+    <body onload="empezarFuncion()">
+        <h1>
+            Formulario simple
+        </h1>
+        <p>
+            Crea un formulario que conste de los siguientes campos: nombre, apellidos, dni, email, ciudad, país
+        </p>
+        <pre>
+Usando el evento onsubmit, realiza la validación para:  
+- Comprobar que en el momento del envío ninguno de los campos está vacío  
+- Comprobar con patrones(expresiones regulares) que sean parámetros válidos  
+- Comprobar que sean válidos el dni con su función http://www.interior.gob.es/web/servicios-al-ciudadano/dni/calculo-del-digito-de-cont rol-del-nif-nie 
+- Formatear los valores nombre,apellidos,ciudad,pais la primera en mayúscula y sin espacios al principio y final  
+- Cuando un valor no sea válido pon un mensaje de alert y selecciona el input y pon el borde rojo
+ 
+Haz una archivo javascript donde llames a cada validación.  
+        </pre>
+        <br/>
+        <form action="ejercicio.html" method="post" accept-charset="UTF-8" name="formulario" id="formulario" enctype="application/x-www-form-urlencoded" target="_blank" onsubmit="return validar()">
+            <fieldset>
+                <legend>Datos personales: </legend>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nompre" id="nombre" placeholder="Introduce tu nombre">
+                <br/>
+                <br/>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" id="apellidos" placeholder="Introduce tus apellidos">
+                <br/>
+                <br/>
+                <label for="dni">DNI:</label>
+                <input type="text" name="dni" id="dni" placeholder="Introduce tu DNI">
+                <br/>
+                <br/>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" placeholder="Introduce tu Email">
+                 <br/>
+                 <br/>
+                <label for="ciudad">Ciudad:</label>
+                <input type="text" name="ciudad" id="ciudad" placeholder="Introduce la ciudad en la que resides">
+                <br/>
+                <br/>
+                <label for="pais">País:</label>
+                <input type="text" name="pais" id="pais" placeholder="Introduce el país en el que resides"> 
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+        </form>
+        <footer>
+            <p>
+                <a href="../../../..">
+                    © Luis Mateo Rivera Uriarte 2019-2020
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

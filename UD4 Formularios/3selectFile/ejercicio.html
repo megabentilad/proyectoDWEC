@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../../webroot/css/styles.css" media="screen">
+        <link rel="icon" type="image/png" href="../../../../mifavicon.png">
+        <script type="text/javascript" src="JavaScript/validaciones.js">
+        </script>
+        <script type="text/javascript" src="JavaScript/script.js">
+        </script>
+        <style>
+            form{
+                width: 30%;
+                margin: auto;
+            }
+            fieldset input{
+                width: 50%;
+            }
+            fieldset p{
+                color: red;
+            }
+            figure:hover{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body onload="empezarFuncion()">
+        <h1>
+            Formulario con select y file
+        </h1>
+        <figure>
+            <img src="../../webroot/img/DWECUD4-3.PNG" alt="Enunciado"/>
+        </figure>
+        <br/>
+        <form name="formulario" id="formulario" onsubmit="return validar1()">
+            <h2>Selector de curso</h2>
+            <select name="select1" id="select1">
+                
+            </select>  
+            <h2 id="h2"></h2>
+            <select name="select2" id="select2">
+                
+            </select> 
+            <br/>
+            <input type="file" multiple>
+            <p id="ficheros"></p>
+            <br/>
+            <input type="submit" value="Enviar">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <input type="range" max="100" min="0" value="50" step="10" list="rango">
+            <datalist id="rango">
+                <option value="10"></option>
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+                <option value="50"></option>
+                <option value="60"></option>
+                <option value="70"></option>
+                <option value="80"></option>
+                <option value="90"></option>
+            </datalist>
+            <input type="date" id="fecha">
+        </form>
+        <form name="formulario2" id="formulario2" onsubmit="return validar2()">
+           
+            <input type="file" multiple id="archivos" name="archivos">
+            <p id="ficheros"></p>
+            <br/>
+            <input type="submit" value="Enviar">
+        </form>
+        <footer>
+            <p>
+                <a href="../../../..">
+                    © Luis Mateo Rivera Uriarte 2019-2020
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

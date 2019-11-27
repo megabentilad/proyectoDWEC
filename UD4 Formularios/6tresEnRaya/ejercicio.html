@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta name="author" content="Luis Mateo Rivera Uriarte">
+        <link rel="stylesheet" type="text/css" href="../../webroot/css/styles.css" media="screen">
+        <link rel="icon" type="image/png" href="../../../mifavicon.png">
+        <script type="text/javascript" src="JavaScript/script.js"></script>
+        <style>
+            table{
+                margin: auto;
+            }
+            td{
+                margin: 1%;
+                background-color: black;
+                color: white;
+                padding: 70px 80px;
+                font-size: 500%;
+                font-family: monospace;
+                cursor: pointer;
+            }
+            .colores{
+                position: fixed;
+                top: 30%;
+            }
+        </style>
+    </head>
+    <body onload="empezarFuncion()">  
+        <h1>Tres en raya</h1>
+        <pre>1. Crea el principio de un juego de res en raya 
+ 
+- Cuando inicia el juego solo hay rayas.  
+- Cuando se ha click en uno de los recuadros se pondrá X o O, según sea el turno 
+- Cuando se mueva el ratón sobre uno de los recuadros con -, se pondrá la X o O en verde 
+- El último valor cambiado puede ser quitado pulsando el botón derecho   <mark>(HE DECIDIDO QUE SEA CON DOBLE CLICK POR COMODIDAD)</mark>
+Se valorará la presentación en función del estilo del resto de tu página web </pre>
+        <table>
+            <tr>
+                <td id="11">
+                    -
+                </td>
+                <td id="12">
+                    -
+                </td>
+                <td id="13">
+                    -
+                </td>
+            </tr>
+            <tr>
+                <td id="21">
+                    -
+                </td>
+                <td id="22">
+                    -
+                </td>
+                <td id="23">
+                    -
+                </td>
+            </tr>
+            <tr>
+                <td id="31">
+                    -
+                </td>
+                <td id="32">
+                    -
+                </td>
+                <td id="33">
+                    -
+                </td>
+            </tr>
+        </table>
+        <div class="colores">
+            <label>
+                Color por defecto: 
+            </label>
+            <input id="porDefecto" type="color" value="#FFFFFF">
+            <br/>
+            <br/>
+            <label>
+                Color del recién marcado: 
+            </label>
+            <input id="ultimoMarcado" type="color" value="#87CEEB">
+            <br/>
+            <br/>
+            <label>
+                Color de la siguiente selección: 
+            </label>
+            <input id="proximo" type="color" value="#008000">
+            <br/>
+            <br/>
+            <label>
+                Color de desselección: 
+            </label>
+            <input id="desseleccion" type="color" value="#FFA500">
+            <br/>
+            <br/>
+            <label>
+                Color de victoria: 
+            </label>
+            <input id="victoria" type="color" value="#008000">
+        </div>
+        <br/>
+        <br/>
+        <footer>
+            <p>
+                <a href="../../../..">
+                    © Luis Mateo Rivera Uriarte 2019-2020
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

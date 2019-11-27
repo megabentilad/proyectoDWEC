@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+        <link rel="icon" type="image/png" href="../../../../mifavicon.png">
+        <script type="text/javascript" src="JavaScript/validaciones.js"></script>
+        <script type="text/javascript" src="JavaScript/script.js"></script>
+        <style>
+            form{
+                width: 20%;
+                margin: auto;
+            }
+            fieldset input{
+                width: 50%;
+            }
+            fieldset p{
+                color: red;
+            }
+            .botones{
+                display: none;
+                margin-bottom: 3%;
+            }
+            .LbotonesA, .LbotonesP{
+                padding: 0.5%;
+                margin-bottom: 0%;
+                border-radius: 12%;
+                cursor: pointer;
+                width: 4%;
+                display: inline-block;
+            }
+            .LbotonesA{
+                background-color: cyan;
+            }
+            .DAW2A, .SMR1A, .SMR2A, .DAW2P, .SMR1P, .SMR2P{
+                display: none;
+            }
+            #formularioP{
+                display: none;
+            }
+            .asignaturasP{
+                position: absolute;
+                top: 40%;
+                left: 65%;
+                width: 10%;
+            }
+            .aceptar{
+                padding: 0.5%;
+                border-radius: 12%;
+                cursor: pointer;
+                width: 4%;
+                position: absolute;
+                top: 43%;
+                left: 58%;
+                background-color: cyan;
+                cursor: pointer;
+                transition: 0.6s;
+            }
+            .aceptar:hover{
+                transition: 0.3s;
+                background-color: #00cccc;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>
+            Formulario final
+        </h1>
+        <div id="Balumno" class="LbotonesA">Alumno</div>
+        <div id="Bprofesor" class="LbotonesP">Profesor</div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <form name="formularioA" id="formularioA" enctype="application/x-www-form-urlencoded" onsubmit="return eComprobarCB()">
+                <label for="nombreA">Nombre:</label>
+                <br/>
+                <input type="text" name="nompreA" id="nombreA" placeholder="Introduce tu nombre">
+                <br/>
+                <br/>
+                <label for="apellidosA">Apellidos:</label>
+                <br/>
+                <input type="text" name="apellidosA" id="apellidosA" placeholder="Introduce tus apellidos">
+                <br/>
+                <br/>
+                <label for="dniA">DNI:</label>
+                <br/>
+                <input type="text" name="dniA" id="dniA" placeholder="Introduce tu DNI">
+                <br/>
+                <br/>
+                <label for="cicloA">Ciclo:</label>
+                <br/>
+                <select name="cicloA" id="cicloA">
+                    <option value="DAW">DAW</option>
+                    <option value="SMR">SMR</option>
+                </select>
+                <br/>
+                <br/>
+                <label for="cursoA">Curso:</label>
+                <br/>
+                <select name="cursoA" id="cursoA">
+                    <option value="primeroA">1er Curso</option>
+                    <option value="segundoA">2º Curso</option>
+                </select>
+                <br/>
+                <label>Asignaturas que estás cursando:</label>
+                <br/>
+                <br/>
+                <div class="DAW1A" id="DAW1A">
+                    <input type="checkbox" name="DAW1A[SI]" id="DAW1A[SI]" class="CBDAW1">
+                    <label for="DAW1A[SI]">Sistemas Informáticos</label>
+                    <br/>
+                    <input type="checkbox" name="DAW1A[BD]" id="DAW1A[BD]" class="CBDAW1">
+                    <label for="DAW1A[BD]">Bases de datos</label>
+                    <br/>
+                    <input type="checkbox" name="DAW1A[PROG]" id="DAW1A[PROG]" class="CBDAW1">
+                    <label for="DAW1A[PROG]">Programación</label>
+                    <br/>
+                    <input type="checkbox" name="DAW1A[LMSGI]" id="DAW1A[LMSGI]" class="CBDAW1">
+                    <label for="DAW1A[LMSGI]">Lenguaje de marcas</label>
+                    <br/>
+                    <input type="checkbox" name="DAW1A[ED]" id="DAW1A[ED]" class="CBDAW1">
+                    <label for="DAW1A[ED]">Entornos de desarrollo</label>
+                    <br/>
+                    <input type="checkbox" name="DAW1A[FOL]" id="DAW1A[FOL]" class="CBDAW1">
+                    <label for="DAW1A[FOL]">Formación y orientación laboral</label>
+                </div>
+                <div class="DAW2A" id="DAW2A">
+                    <input type="checkbox" name="DAW2A[DWEC]" id="DAW2A[DWEC]" class="CBDAW2">
+                    <label for="DAW2A[DWEC]">Desarrollo web en entorno cliente</label>
+                    <br/>
+                    <input type="checkbox" name="DAW2A[DWES]" id="DAW2A[DWES]" class="CBDAW2">
+                    <label for="DAW2A[DWES]">Desarrollo web en entorno servidor</label>
+                    <br/>
+                    <input type="checkbox" name="DAW2A[DAW]" id="DAW2A[DAW]" class="CBDAW2">
+                    <label for="DAW2A[DAW]">Despliegue de aplicaciones web</label>
+                    <br/>
+                    <input type="checkbox" name="DAW2A[DIW]" id="DAW2A[DIW]" class="CBDAW2">
+                    <label for="DAW2A[DIW]">Diseño de interfaces web</label>
+                    <br/>
+                    <input type="checkbox" name="DAW2A[E]" id="DAW2A[E]" class="CBDAW2">
+                    <label for="DAW2A[E]">Empresa</label>
+                </div>
+                <div class="SMR1A" id="SMR1A">
+                    <input type="checkbox" name="SMR1A[SOM]" id="SMR1A[SOM]" class="CBSMR1">
+                    <label for="SMR1A[SOM]">Sistemas operativos monopuestos</label>
+                    <br/>
+                    <input type="checkbox" name="SMR1A[AO]" id="SMR1A[AO]" class="CBSMR1">
+                    <label for="SMR1A[AO]">Aplicaciones ofimáticas</label>
+                    <br/>
+                    <input type="checkbox" name="SMR1A[RL]" id="SMR1A[RL]" class="CBSMR1">
+                    <label for="SMR1A[RL]">Redes locales</label>
+                    <br/>
+                    <input type="checkbox" name="SMR1A[AW]" id="SMR1A[AW]" class="CBSMR1">
+                    <label for="SMR1A[AW]">Aplicaciones web</label>
+                    <br/>
+                    <input type="checkbox" name="SMR1A[FOL]" id="SMR1A[FOL]" class="CBSMR1">
+                    <label for="SMR1A[FOL]">Formación y orientación laboral</label>
+                </div>
+                <div class="SMR2A" id="SMR2A">
+                    <input type="checkbox" name="SMR2A[MME]" id="SMR2A[MME]" class="CBSMR2">
+                    <label for="SMR2A[MME]">Montaje y mantenimiento de equipos</label>
+                    <br/>
+                    <input type="checkbox" name="SMR2A[SOR]" id="SMR2A[SOR]" class="CBSMR2">
+                    <label for="SMR2A[SOR]">Sistemas operativos en red</label>
+                    <br/>
+                    <input type="checkbox" name="SMR2A[SI]" id="SMR2A[SI]" class="CBSMR2">
+                    <label for="SMR2A[SI]">Seguridad informática</label>
+                    <br/>
+                    <input type="checkbox" name="SMR2A[SR]" id="SMR2A[SR]" class="CBSMR2">
+                    <label for="SMR2A[SR]">Servicion en red</label>
+                    <br/>  
+                    <input type="checkbox" name="SMR2A[EIE]" id="SMR2A[EIE]" class="CBSMR2">
+                    <label for="SMR2A[EIE]">Empresa e iniciativa emprendedora</label>
+                </div>
+                <br/>
+                <br/>
+                <label for="emailA">Email:</label>
+                <br/>
+                <input type="text" name="emailA" id="emailA" placeholder="Introduce tu Email">
+                <br/>
+                <br/>
+                <label for="mensajeA">Mensaje:</label>
+                <br/>
+                <textarea name="mensajeA" id="mensajeA" placeholder="Introduce tu mensaje"></textarea>
+                 <br/>
+                 <br/>
+                 <input type="checkbox" id="lpdA">
+                 <label for="lpdA">Acepto las condiciones recistradas en la LPD</label>
+                 <br/>
+                 <br/>
+            <button id="enviarA" disabled>Registrarse</button>
+            <input type="reset" value="Limpiar">
+            <br/>
+            <div id="faltaCheckbox" style="color: red; visibility: hidden;">Debe seleccionar al menos una asignatura</div>
+        </form>
+        
+        
+        
+        <form action="ejercicio.html" method="post" accept-charset="UTF-8" name="formularioP" id="formularioP" enctype="application/x-www-form-urlencoded"  onsubmit="return eComprobarSelect()">
+                <label for="nombreP">Nombre:</label>
+                <br/>
+                <input type="text" name="nompreP" id="nombreP" placeholder="Introduce tu nombre">
+                <br/>
+                <br/>
+                <label for="apellidosP">Apellidos:</label>
+                <br/>
+                <input type="text" name="apellidosP" id="apellidosP" placeholder="Introduce tus apellidos">
+                <br/>
+                <br/>
+                <label for="dniP">DNI:</label>
+                <br/>
+                <input type="text" name="dniP" id="dniP" placeholder="Introduce tu DNI">
+                <br/>
+                <br/>
+                <label for="cicloP">Ciclo:</label>
+                <br/>
+                <select name="cicloP" id="cicloP">
+                    <option value="DAW">DAW</option>
+                    <option value="SMR">SMR</option>
+                </select>
+                <br/>
+                <br/>
+                <label for="cursoP">Curso:</label>
+                <br/>
+                <select name="cursoP" id="cursoP">
+                    <option value="primeroP">1er Curso</option>
+                    <option value="segundoP">2º Curso</option>
+                </select>
+                <br/>
+                <br/>
+                <label>Asignatura:</label>
+                <br/>
+                <select id="DAW1P" class="DAW1P">
+                    <option value="SI">Sistemas Informaticos</option>
+                    <option value="BD">Bases de datos</option>
+                    <option value="PROG">Programación</option>
+                    <option value="LMSGI">Lenguaje de marcas</option>
+                    <option value="ED">Entornos de desarrollo</option>
+                    <option value="FOL">Formación y orientación laboral</option>
+                </select>
+                <select id="DAW2P" class="DAW2P">
+                    <option value="DWEC">Desarrollo web en entorno cliente</option>
+                    <option value="DWES">Desarrollo web en entorno servidor</option>
+                    <option value="DAW">Despliegue de aplicaciones web</option>
+                    <option value="DIW">Diseño de interfaces web</option>
+                    <option value="E">Empresa</option>
+                </select>
+                <select id="SMR1P" class="SMR1P">
+                    <option value="SOM">Sistemas operativos monopuestos</option>
+                    <option value="AO">Aplicaciones ofimáticas</option>
+                    <option value="RL">Redes locales</option>
+                    <option value="AW">Aplicaciones web</option>
+                    <option value="FOL">Formación y orientación laboral</option>
+                </select>
+                <select id="SMR2P" class="SMR2P">
+                    <option value="MME">Montaje y mantenimiento de equipos</option>
+                    <option value="SOR">Sistemas operativos en red</option>
+                    <option value="SI">Seguridad informática</option>
+                    <option value="SR">Servicion en red</option>
+                    <option value="EIE">Empresa e iniciativa emprendedora</option>
+                </select>
+                <div class ="aceptar" id="aceptar">
+                    Aceptar
+                </div>
+                <select id="asignaturasP" class="asignaturasP" size="12">
+                    
+                </select>
+                <br/>
+                <br/>
+                <label for="emailP">Email:</label>
+                <br/>
+                <input type="text" name="emailP" id="emailP" placeholder="Introduce tu Email">
+                <br/>
+                <br/>
+                <label for="mensajeP">Mensaje:</label>
+                <br/>
+                <textarea name="mensajeP" id="mensajeP" placeholder="Introduce tu mensaje"></textarea>
+                 <br/>
+                 <br/>
+                 <input type="checkbox" id="lpdP">
+                 <label for="lpdP">Acepto las condiciones recistradas en la LPD</label>
+                 <br/>
+                 <br/>
+            <input id="enviarP" type="submit" value="Registrarse" disabled>
+            <input type="reset" value="Limpiar">
+        </form>
+        
+        <br/>
+        <br/>
+        <footer>
+            <p>
+                <a href="../../../..">
+                    © Luis Mateo Rivera Uriarte 2019-2020
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

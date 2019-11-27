@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta name="author" content="Luis Mateo Rivera Uriarte">
+        <link rel="stylesheet" type="text/css" href="../../webroot/css/styles.css" media="screen">
+        <link rel="icon" type="image/png" href="../../../mifavicon.png">
+        <script type="text/javascript" src="JavaScript/validaciones.js">
+        </script>
+        <script type="text/javascript" src="JavaScript/script.js">
+        </script>
+        <style>
+            .obligatorio input{
+                background-color: lightblue;
+            }
+            .obligatorio textarea{
+                background-color: lightblue;
+            }
+            .obligatorio select{
+                background-color: lightblue;
+            }
+            .obligatorio label{
+                text-decoration: underline;
+            }
+            .error{
+                background-color: #ff708c;
+                transition: 10s;
+                width: 10%;
+                padding: 0.5%;
+                border-radius: 10%;
+                display: none;
+            }
+        </style>
+    </head>
+    <body onload="empezarFuncion()">  
+        <h1>
+            Plantilla de formulario
+        </h1>
+            <form method="post" name="formulario" id="formulario" onsubmit="return validar()">
+                <fieldset>
+                    <legend>Titulo formulario</legend>
+                    <div class="obligatorio">
+                        <label>Alfabetico: </label>
+                        <input type="text" name="campoAlfabetico" id="campoAlfabetico" placeholder="Alfabetico"><br>
+                        <div class="error" id="errorCampoAlfabetico">
+                        </div>                  
+                    </div>
+                    <div>
+                        <label>Alfabetico opcional: </label>
+                        <input type="text" name="campoAlfabeticoOpcional" id="campoAlfabeticoOpcional" placeholder="Alfabetico"><br>
+                        <div class="error" id="errorCampoAlfabeticoOpcional">
+                        </div>                  
+                    </div>
+                    <br/>
+                    <br/>
+                    <div class="obligatorio">
+                        <label>Alfanumerico: </label> 
+                        <input type="text" name="campoAlfanumerico" id="campoAlfanumerico" placeholder="Alfanumerico"><br>
+                        <div class="error" id="errorCampoAlfanumerico">
+                        </div>   
+                    <?php } ?>                
+                    </div>
+                    <div>
+                        <label>Alfanumerico opcional: </label> 
+                        <input type="text" name="campoAlfanumericoOpcional" id="campoAlfanumericoOpcional" placeholder="Alfanumerico"><br>
+                        <div class="error" id="errorCampoAlfanumericoOpcional">
+                        </div>                 
+                    </div>
+                    <br/>
+                    <br/>
+ 
+                    <br/>
+                    <br/>
+                    <div>
+                        <input type="submit" name="enviar" value="Enviar">
+                    </div>
+                </fieldset>
+            </form>  
+        <br/>
+        <br/>
+        <footer>
+            <p>
+                <a href="../../../..">
+                    © Luis Mateo Rivera Uriarte 2019-2020
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

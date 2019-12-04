@@ -1,0 +1,30 @@
+body{
+    background-color: #e8e8e8;
+    text-align: center;
+}
+figure{
+    margin: 0%;
+}
+header div{
+    background-color: #66b3ff;
+    text-align: center;
+    width: 25%;
+    border-radius: 5%;
+    margin: auto;
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: #2685ff;
+}
+footer{
+    background-color: #66b3ff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+footer a{
+    color: black;
+}

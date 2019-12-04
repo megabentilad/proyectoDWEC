@@ -9,8 +9,8 @@
         <script type="text/javascript" src="JavaScript/script.js"></script>
         <style>
             #digital{
-                width: 50%;
-                padding: 50px;
+                width: 35%;
+                height: 120px;
                 background-color: wheat;
                 text-align: center;
                 font-size: 100px;
@@ -29,18 +29,60 @@
                 border-radius: 100%;
                 background-color: black;
                 position: relative;
-                left: 48%;
+/*                left: 48%;*/
                 top: 10px;
                 
             }
             #aguja{
                 width: 2px;
                 height: 75px;
+                background-color: red;
+                position: relative;
+                top: 15px;
+                transform-origin: 50% 100%;   /* Esto sirve para cambiar el eje desde el cual gira (Me lo dijo Alex ^^) */
+
+            }
+            #minutero{
+                width: 3px;
+                height: 65px;
                 background-color: black;
                 position: relative;
-                left: 50%;
-                top: 15px;
+                top: -60px;
+                transform-origin: 50% 100%;   /* Esto sirve para cambiar el eje desde el cual gira (Me lo dijo Alex ^^) */
 
+            }
+            #horero{
+                width: 5px;
+                height: 45px;
+                background-color: black;
+                position: relative;
+                top: -105px;
+                transform-origin: 50% 100%;   /* Esto sirve para cambiar el eje desde el cual gira (Me lo dijo Alex ^^) */
+
+            }
+            #aguja, #minutero, #horero{
+                border-radius: 20px;
+            }
+            #centro, #aguja, #minutero, #horero{
+                margin: auto;
+            }
+            #doce{
+                position: relative;
+                top: -195px;
+            }
+            #tres{
+                position: relative;
+                left: 80px;
+                top: -135px;
+            }
+            #seis{
+                position: relative;
+                top: -72px;
+            }
+            #nueve{
+                position: relative;
+                left: -80px;
+                top: -170px;
             }
         </style>
     </head>
@@ -55,15 +97,23 @@ Usa un botón para empezar y otros para finalizar
         </pre>
         <mark>Gracias Alexander :3</mark>
         <div id="digital">
-            
+            0 : 00 : 00 : 00
         </div>
-        <h3 id="grados"></h3>
+        <h3 id="grados">grados: 0</h3>
         <button id="boton">Empezar</button>
+        <br/>
+        <br/>
         <br/>
         <div id="marco">
             <div id="aguja"></div>
             <div id="centro"></div>
-        </div>
+            <div id="minutero"></div>
+            <div id="horero"></div>
+            <div id="doce">12</div>
+            <div id="tres">3</div>
+            <div id="seis">6</div>
+            <div id="nueve">9</div>
+        </div>   
         <br/>
         <br/>
         <footer>

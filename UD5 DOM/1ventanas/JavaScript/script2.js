@@ -1,4 +1,5 @@
 function enviarColor(){
+    //window.opener.document.getElementsByTagName("body")[0].style.color = this.style.backgroundColor;     //Con esto es posible hacer el cambio directamente
     window.opener.postMessage(this.style.backgroundColor,'*');
     window.close();
 }

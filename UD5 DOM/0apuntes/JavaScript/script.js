@@ -57,6 +57,52 @@ function cargar(){
     discoteca.addEventListener('click', colorinchis, false);
     discotecaNO = document.getElementById("discotecaNO");
     discotecaNO.addEventListener('click', colorinchisNO, false);
+    
+    //Trabajar con nodos
+    console.log(document.getElementsByName("textoChiquito"));
+    console.log(document.getElementsByTagName("input"));
+    console.log(document.getElementsByClassName("clasexto"));
+    console.log(document.querySelectorAll(".clasexto"));
+    
+    console.log(document.getElementById("texto").nodeName);
+    console.log(document.getElementById("texto").nodeType)
+    console.log(document.getElementById("texto").attributes.name);
+    console.log(document.getElementById("texto").attributes.name.nodeValue);
+    console.log(document.getElementById("texto").attributes.name.nodeType);
+    console.log(document.getElementsByTagName("p")[0].firstChild);
+    console.log(document.getElementsByTagName("p")[0].firstChild.nodeType);
+    
+    console.log(document.getElementById("texto").nodeName.parentNode);
+    console.log(document.getElementById("texto").attributes.name.parentNode);
+    console.log(document.getElementsByTagName("p")[0].firstChild.parentNode);
+    
+    console.log(document.getElementById("texto").nodeName.childNodes);
+    console.log(document.getElementById("texto").attributes.name.childNodes);
+    console.log(document.getElementsByTagName("p")[0].firstChild.childNodes);
+    
+    
+    //Trabajar con elementos
+     var li = document.createElement("li");
+     var liTexto = document.createTextNode('anvorguesa');
+     li.appendChild(liTexto);
+     var  ul = document.getElementsByTagName('ul')[0];
+     ul.appendChild(li);
+     
+     var li = document.createElement("li");
+     var liTexto = document.createTextNode('bocata');
+     li.appendChild(liTexto);
+     var  li1 = document.getElementsByTagName('li')[0];
+     ul.insertBefore(li,li1);
+     
+        //clonar
+    var clonado = liTexto.cloneNode(true);
+    var ul2 = document.getElementsByTagName("ul")[1];
+    ul2.appendChild(clonado);
+    
+        //borrar
+   // ul2.removeChild(clonado);
+    
+    
 }
 
 window.addEventListener('load',cargar,false);

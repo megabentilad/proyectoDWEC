@@ -1,7 +1,9 @@
 function accion(){
     var digital = document.getElementById("digital");
     var grados = document.getElementById("grados");
-    var aguja = document.getElementById("marco");
+    var aguja = document.getElementById("aguja");
+    var minutero = document.getElementById("minutero");
+    var horero = document.getElementById("horero");
     if(this.innerHTML === "Empezar"){
         var centisegundos = 0; 
         left = 5/9/2;
@@ -43,7 +45,9 @@ function accion(){
 //            }
 
             
-            aguja.style.transform = "rotateZ(" + centisegundos*0.06%360 + "deg)";
+            aguja.style.transform = "rotate(" + centisegundos*0.06%360 + "deg)";
+            minutero.style.transform = "rotate(" + centisegundos*0.06%(360*60)/60 + "deg)";
+            horero.style.transform = "rotate(" + centisegundos*0.06%(360*3600)/3600 + "deg)";     //los "%360", "%(360*60)" y "%(360*3600)" es para que, cuando la aguja da una vuelta, los grados vuelvan a ser 0 en vez de sumar infinitamente.
 //            aguja.style.left = centisegundos*0.06%360*left+50 + "%";
 //            aguja.style.top = centisegundos*0.06%360*top + "%";
             
@@ -59,6 +63,8 @@ function accion(){
 function cargar(){
     var boton = document.getElementById("boton");
     boton.addEventListener('click', accion,false);
+    console.log(navigator.platform);
+    console.log(navigator.userAgent);
 }
 
 window.addEventListener('load',cargar,false);

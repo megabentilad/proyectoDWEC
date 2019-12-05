@@ -107,6 +107,7 @@
                 <label for="cicloA">Ciclo:</label>
                 <br/>
                 <select name="cicloA" id="cicloA">
+                    <option value="nada">Seleccione un ciclo</option>
                     <option value="DAW">DAW</option>
                     <option value="SMR">SMR</option>
                 </select>
@@ -115,6 +116,7 @@
                 <label for="cursoA">Curso:</label>
                 <br/>
                 <select name="cursoA" id="cursoA">
+                    <option value="nada">Seleccione un curso</option>
                     <option value="primeroA">1er Curso</option>
                     <option value="segundoA">2º Curso</option>
                 </select>
@@ -122,9 +124,7 @@
                 <label>Asignaturas que estás cursando:</label>
                 <br/>
                 <br/>
-                <div id="asignaturasA">
-                    <input type="checkbox" name="DAW1A[SI]" id="DAW1A[SI]" class="CBDAW1"><label for="DAW1A[SI]">Sistemas informáticos</label><br><input type="checkbox" name="DAW1A[BD]" id="DAW1A[BD]" class="CBDAW1"><label for="DAW1A[BD]">Bases de datos</label><br><input type="checkbox" name="DAW1A[PROG]" id="DAW1A[PROG]" class="CBDAW1"><label for="DAW1A[PROG]">Programación</label><br><input type="checkbox" name="DAW1A[LMSGI]" id="DAW1A[LMSGI]" class="CBDAW1"><label for="DAW1A[LMSGI]">Lenguaje de marcas</label><br><input type="checkbox" name="DAW1A[ED]" id="DAW1A[ED]" class="CBDAW1"><label for="DAW1A[ED]">Entornos de desarrollo</label><br><input type="checkbox" name="DAW1A[FOL]" id="DAW1A[FOL]" class="CBDAW1"><label for="DAW1A[FOL]">Formación y orientación laboral</label>
-                </div>
+                <div id="asignaturasA"></div>
                 <br/>
                 <br/>
                 <label for="emailA">Email:</label>
@@ -168,6 +168,7 @@
                 <label for="cicloP">Ciclo:</label>
                 <br/>
                 <select name="cicloP" id="cicloP">
+                    <option value="nada">Seleccione un ciclo</option>
                     <option value="DAW">DAW</option>
                     <option value="SMR">SMR</option>
                 </select>
@@ -176,6 +177,7 @@
                 <label for="cursoP">Curso:</label>
                 <br/>
                 <select name="cursoP" id="cursoP">
+                    <option value="nada">Seleccione un curso</option>
                     <option value="primeroP">1er Curso</option>
                     <option value="segundoP">2º Curso</option>
                 </select>
@@ -183,35 +185,7 @@
                 <br/>
                 <label>Asignatura:</label>
                 <br/>
-                <select id="DAW1P" class="DAW1P">
-                    <option value="SI">Sistemas Informaticos</option>
-                    <option value="BD">Bases de datos</option>
-                    <option value="PROG">Programación</option>
-                    <option value="LMSGI">Lenguaje de marcas</option>
-                    <option value="ED">Entornos de desarrollo</option>
-                    <option value="FOL">Formación y orientación laboral</option>
-                </select>
-                <select id="DAW2P" class="DAW2P">
-                    <option value="DWEC">Desarrollo web en entorno cliente</option>
-                    <option value="DWES">Desarrollo web en entorno servidor</option>
-                    <option value="DAW">Despliegue de aplicaciones web</option>
-                    <option value="DIW">Diseño de interfaces web</option>
-                    <option value="E">Empresa</option>
-                </select>
-                <select id="SMR1P" class="SMR1P">
-                    <option value="SOM">Sistemas operativos monopuestos</option>
-                    <option value="AO">Aplicaciones ofimáticas</option>
-                    <option value="RL">Redes locales</option>
-                    <option value="AW">Aplicaciones web</option>
-                    <option value="FOL">Formación y orientación laboral</option>
-                </select>
-                <select id="SMR2P" class="SMR2P">
-                    <option value="MME">Montaje y mantenimiento de equipos</option>
-                    <option value="SOR">Sistemas operativos en red</option>
-                    <option value="SI">Seguridad informática</option>
-                    <option value="SR">Servicion en red</option>
-                    <option value="EIE">Empresa e iniciativa emprendedora</option>
-                </select>
+                <div id="asignaturasP"></div>
                 <div class ="aceptar" id="aceptar">
                     Aceptar
                 </div>

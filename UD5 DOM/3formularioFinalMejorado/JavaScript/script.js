@@ -134,9 +134,7 @@ function eComprobarSeleccionado(){
     activarEnviar();
 }
 function eComprobarCB(){
-
     var cajas = document.getElementsByTagName("input");
-
     var contador = 0;
     for(var i = 0; i< cajas.length; i++){
         if(cajas[i].type === "checkbox"){
@@ -144,9 +142,8 @@ function eComprobarCB(){
                 contador++;
             }
         }
-        
     }
-    if(contador === 0){
+    if(contador === 1){
         document.getElementById("faltaCheckbox").style.visibility = "visible";
         return false;
     }else{
@@ -176,114 +173,153 @@ function mostrarAsignaturasA(){
     while(divAsignaturas.hasChildNodes()){
             divAsignaturas.removeChild(divAsignaturas.childNodes[0]);
     }
-    if(cicloA.value === "DAW"){
-        if(cursoA.value === "primeroA"){
-            for(var i = 0; i < asignaturasDAW1A1.length; i++){
-                opcion = document.createElement("input");
-                opcion.setAttribute("type","checkbox");
-                opcion.setAttribute("name","DAW1A[" + asignaturasDAW1A2[i] + "]");
-                opcion.setAttribute("id","DAW1A[" + asignaturasDAW1A2[i] + "]");
-                opcion.setAttribute("class","CBDAW1");
-                divAsignaturas.appendChild(opcion);
-                
-                etiqueta = document.createElement("label");
-                etiqueta.setAttribute("for","DAW1A[" + asignaturasDAW1A2[i] + "]");
-                
-                texto = document.createTextNode(asignaturasDAW1A1[i]);
-                etiqueta.appendChild(texto);
-                
-                divAsignaturas.appendChild(etiqueta);
-                
-                divAsignaturas.appendChild(document.createElement("br"));
+    if(cicloA.value !== "nada" && cursoA.value !== "nada"){
+        if(cicloA.value === "DAW"){
+            if(cursoA.value === "primeroA"){
+                for(var i = 0; i < asignaturasDAW1A1.length; i++){
+                    opcion = document.createElement("input");
+                    opcion.setAttribute("type","checkbox");
+                    opcion.setAttribute("name","DAW1A[" + asignaturasDAW1A2[i] + "]");
+                    opcion.setAttribute("id","DAW1A[" + asignaturasDAW1A2[i] + "]");
+                    opcion.setAttribute("class","CBDAW1");
+                    divAsignaturas.appendChild(opcion);
+
+                    etiqueta = document.createElement("label");
+                    etiqueta.setAttribute("for","DAW1A[" + asignaturasDAW1A2[i] + "]");
+
+                    texto = document.createTextNode(asignaturasDAW1A1[i]);
+                    etiqueta.appendChild(texto);
+
+                    divAsignaturas.appendChild(etiqueta);
+
+                    divAsignaturas.appendChild(document.createElement("br"));
+                }
+            }else{
+                for(var i = 0; i < asignaturasDAW2A1.length; i++){
+                    opcion = document.createElement("input");
+                    opcion.setAttribute("type","checkbox");
+                    opcion.setAttribute("name","DAW1A[" + asignaturasDAW2A2[i] + "]");
+                    opcion.setAttribute("id","DAW1A[" + asignaturasDAW2A2[i] + "]");
+                    opcion.setAttribute("class","CBDAW1");
+                    divAsignaturas.appendChild(opcion);
+
+                    etiqueta = document.createElement("label");
+                    etiqueta.setAttribute("for","DAW1A[" + asignaturasDAW2A2[i] + "]");
+
+                    texto = document.createTextNode(asignaturasDAW2A1[i]);
+                    etiqueta.appendChild(texto);
+
+                    divAsignaturas.appendChild(etiqueta);
+
+                    divAsignaturas.appendChild(document.createElement("br"));
+                }
             }
         }else{
-            for(var i = 0; i < asignaturasDAW2A1.length; i++){
-                opcion = document.createElement("input");
-                opcion.setAttribute("type","checkbox");
-                opcion.setAttribute("name","DAW1A[" + asignaturasDAW2A2[i] + "]");
-                opcion.setAttribute("id","DAW1A[" + asignaturasDAW2A2[i] + "]");
-                opcion.setAttribute("class","CBDAW1");
-                divAsignaturas.appendChild(opcion);
-                
-                etiqueta = document.createElement("label");
-                etiqueta.setAttribute("for","DAW1A[" + asignaturasDAW2A2[i] + "]");
-                
-                texto = document.createTextNode(asignaturasDAW2A1[i]);
-                etiqueta.appendChild(texto);
-                
-                divAsignaturas.appendChild(etiqueta);
-                
-                divAsignaturas.appendChild(document.createElement("br"));
-            }
-        }
-    }else{
-        if(cursoA.value === "primeroA"){
-            for(var i = 0; i < asignaturasSMR1A1.length; i++){
-                opcion = document.createElement("input");
-                opcion.setAttribute("type","checkbox");
-                opcion.setAttribute("name","DAW1A[" + asignaturasSMR1A2[i] + "]");
-                opcion.setAttribute("id","DAW1A[" + asignaturasSMR1A2[i] + "]");
-                opcion.setAttribute("class","CBDAW1");
-                divAsignaturas.appendChild(opcion);
-                
-                etiqueta = document.createElement("label");
-                etiqueta.setAttribute("for","DAW1A[" + asignaturasSMR1A2[i] + "]");
-                
-                texto = document.createTextNode(asignaturasSMR1A1[i]);
-                etiqueta.appendChild(texto);
-                
-                divAsignaturas.appendChild(etiqueta);
-                
-                divAsignaturas.appendChild(document.createElement("br"));
-            }
-        }else{
-            for(var i = 0; i < asignaturasSMR2A1.length; i++){
-                opcion = document.createElement("input");
-                opcion.setAttribute("type","checkbox");
-                opcion.setAttribute("name","DAW1A[" + asignaturasSMR2A2[i] + "]");
-                opcion.setAttribute("id","DAW1A[" + asignaturasSMR2A2[i] + "]");
-                opcion.setAttribute("class","CBDAW1");
-                divAsignaturas.appendChild(opcion);
-                
-                etiqueta = document.createElement("label");
-                etiqueta.setAttribute("for","DAW1A[" + asignaturasSMR2A2[i] + "]");
-                
-                texto = document.createTextNode(asignaturasSMR2A1[i]);
-                etiqueta.appendChild(texto);
-                
-                divAsignaturas.appendChild(etiqueta);
-                
-                divAsignaturas.appendChild(document.createElement("br"));
+            if(cursoA.value === "primeroA"){
+                for(var i = 0; i < asignaturasSMR1A1.length; i++){
+                    opcion = document.createElement("input");
+                    opcion.setAttribute("type","checkbox");
+                    opcion.setAttribute("name","DAW1A[" + asignaturasSMR1A2[i] + "]");
+                    opcion.setAttribute("id","DAW1A[" + asignaturasSMR1A2[i] + "]");
+                    opcion.setAttribute("class","CBDAW1");
+                    divAsignaturas.appendChild(opcion);
+
+                    etiqueta = document.createElement("label");
+                    etiqueta.setAttribute("for","DAW1A[" + asignaturasSMR1A2[i] + "]");
+
+                    texto = document.createTextNode(asignaturasSMR1A1[i]);
+                    etiqueta.appendChild(texto);
+
+                    divAsignaturas.appendChild(etiqueta);
+
+                    divAsignaturas.appendChild(document.createElement("br"));
+                }
+            }else{
+                for(var i = 0; i < asignaturasSMR2A1.length; i++){
+                    opcion = document.createElement("input");
+                    opcion.setAttribute("type","checkbox");
+                    opcion.setAttribute("name","DAW1A[" + asignaturasSMR2A2[i] + "]");
+                    opcion.setAttribute("id","DAW1A[" + asignaturasSMR2A2[i] + "]");
+                    opcion.setAttribute("class","CBDAW1");
+                    divAsignaturas.appendChild(opcion);
+
+                    etiqueta = document.createElement("label");
+                    etiqueta.setAttribute("for","DAW1A[" + asignaturasSMR2A2[i] + "]");
+
+                    texto = document.createTextNode(asignaturasSMR2A1[i]);
+                    etiqueta.appendChild(texto);
+
+                    divAsignaturas.appendChild(etiqueta);
+
+                    divAsignaturas.appendChild(document.createElement("br"));
+                }
             }
         }
     }
 }
 
 function mostrarAsignaturasP(){
-    if(cicloP.value === "DAW"){
-        if(cursoP.value === "primeroP"){
-            document.getElementById("DAW1P").style.display = "block";
-            document.getElementById("DAW2P").style.display = "none";
-            document.getElementById("SMR1P").style.display = "none";
-            document.getElementById("SMR2P").style.display = "none";
+    var asignaturasDAW1A1 = ["Sistemas informáticos", "Bases de datos","Programación","Lenguaje de marcas","Entornos de desarrollo","Formación y orientación laboral"];
+    var asignaturasDAW1A2 = ["SI", "BD","PROG","LMSGI","ED","FOL"];
+    
+    var asignaturasDAW2A1 = ["Desarrollo web en entorno cliente","Desarrollo web en entorno servidor","Despliegue de aplicaciones web","Diseño de interfaces web","Empresa"];
+    var asignaturasDAW2A2 = ["DWEC", "DWES","DAW","DIW","E"];
+    
+    var asignaturasSMR1A1 = ["Sistemas operativos monopuestos","Aplicaciones ofimáticas","Redes locales","Aplicaciones web","Formación y orientación laboral"];
+    var asignaturasSMR1A2 = ["SOM","AO","RL","AW","FOL"];
+    
+    var asignaturasSMR2A1 = ["Montaje y mantenimiento de equipos","Sistemas operativos en red","Seguridad informática","Servicion en red","Empresa e iniciativa emprendedora"];
+    var asignaturasSMR2A2 = ["MME","SOR","SI","SR","EIE"];
+    
+    var divAsignaturas = document.getElementById("asignaturasP")
+    var selector;
+    var texto;
+    var option;
+    //borrar lo anterioro
+    while(divAsignaturas.hasChildNodes()){
+            divAsignaturas.removeChild(divAsignaturas.childNodes[0]);
+    }
+    if(cicloP.value !== "nada" && cursoP.value !== "nada"){
+        selector = document.createElement("select");
+        divAsignaturas.appendChild(selector);
+        if(cicloP.value === "DAW"){
+            if(cursoP.value === "primeroP"){
+                for(var i = 0; i < asignaturasDAW1A1.length; i++){
+                    option = document.createElement("option");
+                    option.setAttribute("value", asignaturasDAW1A2[i]);
+
+                    texto = document.createTextNode(asignaturasDAW1A1[i]);
+                    option.appendChild(texto);
+                }
+            }else{
+                for(var i = 0; i < asignaturasDAW2A1.length; i++){
+                    option = document.createElement("option");
+                    option.setAttribute("value", asignaturasDAW2A2[i]);
+
+                    texto = document.createTextNode(asignaturasDAW2A1[i]);
+                    option.appendChild(texto);
+                }
+            }
         }else{
-            document.getElementById("DAW1P").style.display = "none";
-            document.getElementById("DAW2P").style.display = "block";
-            document.getElementById("SMR1P").style.display = "none";
-            document.getElementById("SMR2P").style.display = "none";
+            if(cursoP.value === "primeroP"){
+                for(var i = 0; i < asignaturasSMR1A1.length; i++){
+                    option = document.createElement("option");
+                    option.setAttribute("value", asignaturasSMR1A2[i]);
+
+                    texto = document.createTextNode(asignaturasSMR1A1[i]);
+                    option.appendChild(texto);
+                }
+            }else{
+                for(var i = 0; i < asignaturasSMR2A1.length; i++){
+                    option = document.createElement("option");
+                    option.setAttribute("value", asignaturasSMR2A2[i]);
+
+                    texto = document.createTextNode(asignaturasSMR2A1[i]);
+                    option.appendChild(texto);
+                }
+            }
         }
-    }else{
-        if(cursoP.value === "primeroP"){
-            document.getElementById("DAW1P").style.display = "none";
-            document.getElementById("DAW2P").style.display = "none";
-            document.getElementById("SMR1P").style.display = "block";
-            document.getElementById("SMR2P").style.display = "none";
-        }else{
-            document.getElementById("DAW1P").style.display = "none";
-            document.getElementById("DAW2P").style.display = "none";
-            document.getElementById("SMR1P").style.display = "none";
-            document.getElementById("SMR2P").style.display = "block";
-        }
+        selector.appendChild(option);
     }
 }
 function eComprobarSelect(){

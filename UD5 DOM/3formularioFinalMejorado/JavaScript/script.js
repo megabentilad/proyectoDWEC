@@ -106,20 +106,15 @@ function cambiarFormulario(){
         tipoFormularioA.style.cursor = 'pointer';
     }
 }
-function eSumarAsignatura() {
+function eSumarAsignatura() {   //No funciona
     var option;
-    if(document.getElementById("DAW1P").style.display !== "none"){
-        option = document.getElementById("DAW1P").selectedIndex.cloneNode(true);    //nuevo
-    }else{
-        if(document.getElementById("DAW2P").style.display !== "none"){
-            option = document.getElementById("DAW2P").cloneNode(true);    //nuevo
-        }else{
-           if(document.getElementById("SMR1P").style.display !== "none"){
-                option = document.getElementById("SMR1P").cloneNode(true);    //nuevo
-            }else{
-                if(document.getElementById("SMR2P").style.display !== "none"){
-                    option = document.getElementById("SMR2P").cloneNode(true);    //nuevo
-                }
+    var select;
+    if(document.getElementById('asignaturasP').hasChildNodes()){
+        select = document.getElementsByTagName('select')[4];
+        for(var i = 0; i < select.length; i++) {
+            if(select[i].selected){
+                option = select[i].cloneNode;
+                console.log(option);
             }
         }
     }
@@ -290,6 +285,7 @@ function mostrarAsignaturasP(){
 
                     texto = document.createTextNode(asignaturasDAW1A1[i]);
                     option.appendChild(texto);
+                    selector.appendChild(option);
                 }
             }else{
                 for(var i = 0; i < asignaturasDAW2A1.length; i++){
@@ -298,6 +294,7 @@ function mostrarAsignaturasP(){
 
                     texto = document.createTextNode(asignaturasDAW2A1[i]);
                     option.appendChild(texto);
+                    selector.appendChild(option);
                 }
             }
         }else{
@@ -308,6 +305,7 @@ function mostrarAsignaturasP(){
 
                     texto = document.createTextNode(asignaturasSMR1A1[i]);
                     option.appendChild(texto);
+                    selector.appendChild(option);
                 }
             }else{
                 for(var i = 0; i < asignaturasSMR2A1.length; i++){
@@ -316,10 +314,10 @@ function mostrarAsignaturasP(){
 
                     texto = document.createTextNode(asignaturasSMR2A1[i]);
                     option.appendChild(texto);
+                    selector.appendChild(option);
                 }
             }
         }
-        selector.appendChild(option);
     }
 }
 function eComprobarSelect(){

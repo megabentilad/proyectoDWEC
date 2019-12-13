@@ -37,7 +37,7 @@
             #formularioP{
                 display: none;
             }
-            .asignaturasP{
+            .asignaturasProf{
                 position: absolute;
                 top: 40%;
                 left: 65%;
@@ -121,6 +121,7 @@
                     <option value="segundoA">2º Curso</option>
                 </select>
                 <br/>
+                <br/>
                 <label>Asignaturas que estás cursando:</label>
                 <br/>
                 <br/>
@@ -192,9 +193,7 @@
                 <div class ="eliminar" id="eliminar">
                     Eliminar
                 </div>
-                <select id="asignaturasP" class="asignaturasP" size="12">
-                    
-                </select>
+                <select id="asignaturasProf" class="asignaturasProf" size="12"></select>
                 <br/>
                 <br/>
                 <label for="emailP">Email:</label>
@@ -213,6 +212,7 @@
                  <br/>
             <input id="enviarP" type="submit" value="Registrarse" disabled>
             <input type="reset" value="Limpiar">
+            <div id="faltaSelect" style="color: red; visibility: hidden;">Debe seleccionar al menos una asignatura</div>
         </form>
         
         <br/>

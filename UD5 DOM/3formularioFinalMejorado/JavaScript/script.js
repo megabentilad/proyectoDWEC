@@ -13,10 +13,11 @@ function empezarFuncion(){
     mensajeP = document.getElementById("mensajeP");
     aceptar = document.getElementById("aceptar");
     eliminar = document.getElementById("eliminar");       //nuevo
-    asignaturasP = document.getElementById("asignaturasP");
+    asignaturasProf = document.getElementById("asignaturasProf");
     lpdP = document.getElementById("lpdP");
     lpdA = document.getElementById("lpdA");
     enviarA = document.getElementById("enviarA");
+    enviarP = document.getElementById("enviarP");
 
     
     nombreA.addEventListener('blur', eValidarAlfabetico, false);
@@ -34,6 +35,7 @@ function empezarFuncion(){
     lpdP.addEventListener('click', eComprobarSeleccionado, false);
     lpdA.addEventListener('click', eComprobarSeleccionado, false);
     enviarA.addEventListener('click', eComprobarCB, false);
+    enviarP.addEventListener('click', eComprobarSelect, false);
     
     
     //FORMULARIOS
@@ -111,25 +113,21 @@ function eSumarAsignatura() {   //No funciona
     var select;
     if(document.getElementById('asignaturasP').hasChildNodes()){
         select = document.getElementsByTagName('select')[4];
-        for(var i = 0; i < select.length; i++) {
-            if(select[i].selected){
-                option = select[i].cloneNode;
-                console.log(option);
-            }
-        }
+        option = select.childNodes[select.selectedIndex].cloneNode(true);
+        console.log(option);
     }
-    asignaturasP.appendChild(option);
+    asignaturasProf.appendChild(option);
 }
 function eBorrarAsignatura(){        //nuevo
-    asignaturasP.childNodes.forEach(function(item){
-        asignaturasP.removeChild(item);
-    });
+    if(asignaturasProf.hasChildNodes()){
+        asignaturasProf.removeChild(asignaturasProf.childNodes[asignaturasProf.selectedIndex]);
+    }
 }
 function eComprobarSeleccionado(){
     activarEnviar();
 }
 function eComprobarCB(){
-    var cajas = document.getElementsByTagName("input");
+    var cajas = document.getElementsByClassName("CBDAW1");
     var contador = 0;
     for(var i = 0; i< cajas.length; i++){
         if(cajas[i].type === "checkbox"){
@@ -138,7 +136,7 @@ function eComprobarCB(){
             }
         }
     }
-    if(contador === 1){
+    if(contador === 0){
         document.getElementById("faltaCheckbox").style.visibility = "visible";
         return false;
     }else{
@@ -321,7 +319,13 @@ function mostrarAsignaturasP(){
     }
 }
 function eComprobarSelect(){
-    
+    if(asignaturasProf.hasChildNodes()){
+        document.getElementById("faltaSelect").style.visibility = "hidden";
+        return true;
+    }else{
+        document.getElementById("faltaSelect").style.visibility = "visible";
+        return false;
+    }
 }
 
 function activarEnviar(){

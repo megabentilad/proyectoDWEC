@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+        <link rel="icon" type="image/png" href="../../../../mifavicon.png">
+        <script type="text/javascript" src="JavaScript/validaciones.js"></script>
+        <script type="text/javascript" src="JavaScript/script.js"></script>
+    </head>
+    <body>
+        <h1>
+            Comprar billetes
+        </h1>
+        <br/>
+        <br/>
+        <div id="formularioInicial">
+            <form name="formularioA" id="formularioA" enctype="application/x-www-form-urlencoded" onsubmit="return borrarFormulario()">
+                    <label for="origen">Origen:</label>
+                    <br/>
+                    <input type="text" name="origen" id="origen" placeholder="Introduce el origen">
+                    <br/>
+                    <br/>
+                    <label for="destino">Destino:</label>
+                    <br/>
+                    <input type="text" name="destino" id="destino" placeholder="Introduce el destino">
+                    <br/>
+                    <br/>
+                    <label for="fecha">Fecha:</label>
+                    <br/>
+                    <input type="date" name="fecha" id="fecha">
+                    <br/>
+                    <br/>
+                    <label for="pasajeros">Pasajeros:</label>
+                    <br/>
+                    <input type="number" name="pasajeros" id="pasajeros" value="1" min="1" max="10">
+                    <br/>
+                    <br/>
+                    <input type="checkbox" id="lpdA">
+                    <label for="lpdA">Acepto las condiciones recistradas en la LPD</label>
+                    <br/>
+                    <br/>
+                <button id="enviarA" disabled>Aceptar</button>
+                <input type="reset" value="Enviar">
+                <br/>
+            </form>
+        </div>
+        <br/>
+        <br/>
+        <div id="formulariosPasajeros"></div>
+        <br/>
+        <br/>
+        <footer>
+            <p>
+                <a href="../../../..">
+                    © Luis Mateo Rivera Uriarte 2019-2020
+                </a>
+            </p>
+        </footer>
+    </body>
+</html>

@@ -28,3 +28,7 @@ footer{
 footer a{
     color: black;
 }
+.ormulariosPasajeros form fieldset{
+    display: flex;
+    flex-flow: column;
+}

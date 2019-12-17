@@ -135,9 +135,26 @@ function crearFormularios(){
         Ldni.appendChild(TLdni);
         
         //asignar campos y etiquetas al fieldset
+        fieldPasajero.appendChild(Lnombre);
+        fieldPasajero.appendChild(Cnombre);
+        
+        fieldPasajero.appendChild(Lapellidos);
+        fieldPasajero.appendChild(Capellidos);
+        
+        fieldPasajero.appendChild(Lemail);
+        fieldPasajero.appendChild(Cemail);
+        
+        fieldPasajero.appendChild(Lfecha);
+        fieldPasajero.appendChild(Cfecha);
+        
+        fieldPasajero.appendChild(Ldni);
+        fieldPasajero.appendChild(Cdni);
+        
+        //fieldset al formulario
+        Fpasajero.appendChild(fieldPasajero);  
     }
-
-    
+    //formulario al div
+    document.getElementById("formulariosPasajeros").appendChild(Fpasajero);
 }
 function cambioFormulario(){
     crearFormularios();

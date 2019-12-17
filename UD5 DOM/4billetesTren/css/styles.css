@@ -17,6 +17,11 @@ a{
     text-decoration: none;
     color: #2685ff;
 }
+#formulariosPasajeros form{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
 footer{
     background-color: #66b3ff;
     width: 100%;
@@ -28,7 +33,12 @@ footer{
 footer a{
     color: black;
 }
-.ormulariosPasajeros form fieldset{
+fieldset{
     display: flex;
     flex-flow: column;
+    width: 20%;
+    margin-left: 8%
+}
+fieldset input{
+    margin-left: 25%;
 }

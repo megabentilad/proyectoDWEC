@@ -1,0 +1,69 @@
+body{
+    text-align: center;
+    color: black;
+    background-color: #e8e8e8;
+}
+figure{
+    margin: 0%;
+}
+figure:hover{
+    width: 110%;
+}
+figcaption{
+    font-weight: bold;
+}
+header div{
+    background-color: #66b3ff;
+    text-align: center;
+    width: 25%;
+    border-radius: 5%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+footer{
+    background-color: #66b3ff;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.php{
+    width: 20%
+}
+.php img{
+    width: 80%;
+}
+
+.javascript{
+    width: 20%
+}
+.javascript img{
+    width: 100%;
+}
+
+.daw{
+    width: 20%
+}
+.daw img{
+    width: 60%;
+}
+
+.diw{
+    width: 20%
+}
+.diw img{
+    width: 70%;
+}
+
+.enlaces{
+    position: absolute;
+    bottom: 40%;
+    transition: 1s;
+}
+.enlaces div{
+    display: inline-block;
+}

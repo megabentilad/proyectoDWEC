@@ -53,14 +53,14 @@ function validarDecimal(numero, obligatorio = 0, min = Number.MIN_VALUE, max = N
     numero = numero.trim();
     var mensajeError = null;
     if(!obligatorio && numero === ""){
-        return true;
+        return mensajeError;
     }else{
-        numero = parseInt(numero);
-        if(!numero.isNaN() && numero >= min && numero <= max){
-            return true;
+        numero = parseFloat(numero);
+        if(numero.isNaN() || numero < min || numero > max){
+            mensajeError = "El valor debe ser un número entre el " + min + " y el " + max;
         }
     }
-    return false;
+    return mensajeError;
 }
 
 function validarDni(dni) {

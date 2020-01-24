@@ -148,7 +148,7 @@ function mostrarAsignaturasA(){
     var asignaturasSMR2A1 = ["Montaje y mantenimiento de equipos","Sistemas operativos en red","Seguridad informática","Servicion en red","Empresa e iniciativa emprendedora"];
     var asignaturasSMR2A2 = ["MME","SOR","SI","SR","EIE"];
     
-    var divAsignaturas = document.getElementById("asignaturasA")
+    var divAsignaturas = $("#asignaturasA");
     var opcion;
     var etiqueta;
     var texto;

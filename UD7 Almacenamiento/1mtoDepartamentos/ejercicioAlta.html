@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0092)http://daw215.sauces.local/proyectoDWES/mtoDepartamentosTema4/codigoPHP/altaDepartamento.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Luis Mateo Rivera Uriarte</title>
+        <meta name="author" content="Luis Mateo Rivera Uriarte">
+        <meta name="date" content="06-11-2019">
+        <link rel="icon" type="image/png" href="img/mifavicon.png">
+        <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen">
+        <script type="text/javascript" src="JavaScript/validaciones.js"></script>
+        <script type="text/javascript" src="JavaScript/jquery.js"></script>
+        <script type="text/javascript" src="JavaScript/script.js"></script>
+        <style>
+            form{
+                width: 35%;
+                text-align: left;
+            }
+            .obligatorio input{
+                background-color: lightblue;
+            }
+            .error{
+                background-color: #ff708c;
+                width: 30%;
+                padding: 0.5%;
+                border-radius: 10%;
+                margin-left: 0.5%;
+                display: inline-block;
+            }
+            .codigo{
+                width: 10%;
+            }
+            .tabla{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body cz-shortcut-listen="true">  
+        <header>
+            <div>
+                <h1>
+                    Mantenimiento de departamentos
+                </h1>
+                <h2>
+                    Dar de alta
+                </h2>
+            </div>
+        </header>
+        
+                <form action="ejercicio.html" method="post" onsubmit="return insertarDB()">
+                    <fieldset>
+                        <legend>Creador de departamentos</legend>
+                        <div class="obligatorio">
+                            Código del departamento: 
+                            <input class="codigo" type="text" id="codigo" maxlength="3" placeholder="JBC" value=""> <!--//Si el valor es bueno, lo escribe en el campo-->
+                              
+                            <br>
+                            <label>*Las letras se guardarán en mayúsculas</label>     
+                        </div>
+                        <br>
+                        <div class="obligatorio">
+                            Descripción del departamento: 
+                            <input type="text" id="descripcion" placeholder="Descripción to chachi" value=""> <!--//Si el valor es bueno, lo escribe en el campo-->
+                                            
+                        </div>
+                        <br>
+                        <div class="obligatorio">
+                            Volumen de negocio: 
+                            <input type="text" id="volumen" placeholder="Volumen en €" value=""> <!--//Si el valor es bueno, lo escribe en el campo-->
+                                            
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <input type="submit" name="crear" value="Crear">
+                            <a href="ejercicio.html"><input type="button" value="Cancelar"></a>
+                        </div>
+                    </fieldset>
+                </form>
+           
+            <br>
+                    <footer>
+            <p>
+                © Luis Mateo Rivera Uriarte 2019-2020
+            </p>
+        </footer>
+    
+</body></html>

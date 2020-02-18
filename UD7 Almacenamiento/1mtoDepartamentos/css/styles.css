@@ -59,6 +59,8 @@ form{
 }
 .images{
     text-align: center;
+    width: 50px;
+    cursor: pointer;
 }
 .nuevo{
     width: 40px;
@@ -70,4 +72,9 @@ form{
 }
 .nuevo:hover{
     opacity: 1;
+}
+button{
+    background-color: transparent;
+    border: 0px solid green;
+    
 }

@@ -1,5 +1,6 @@
 
     var bd;
+    crearDB();
     function crearDB(){
         var abrirDB = window.indexedDB.open("departamentos",1); //nombre y versión
         //si la operación tiene éxito, crea la base de datos o la abre si ya existe
@@ -31,7 +32,7 @@
             $('#descripcion').after("<div class='error'>" + eDescripcion + "</div>");
             contadorErrores++;
         }
-        var eVolumen = validarDecimal($('#volumen').val(),1,0,99999);
+        var eVolumen = validarDecimal($('#volumen').val(),1,0,9999);
         if(eVolumen !== null){
             $('#volumen').after("<div class='error'>" + eVolumen + "</div>");
             contadorErrores++;
@@ -40,17 +41,22 @@
             return false;
         }
         //insertar
+        
       //Crear una transacción
         var transaccion = bd.transaction(["departamento"],"readwrite");
       //Guardamos el objeto en el contenedor
         var contenedor = transaccion.objectStore("departamento");
         contenedor.add({codDepartamento:$('#codigo').val(),descDepartamento:$('#descripcion').val(),volDepartamento:$('#volumen').val(), estadoDepartamento:"alta"});
+        console.log($('#codigo').val());
+        console.log($('#descripcion').val());
+        console.log($('#volumen').val());
         
         return true;
     }
     
     
-    function leerTodoDB(){
+    async function leerTodoDB(){
+        await new Promise(r => setTimeout(r, 200));
         var transaccion = bd.transaction(["departamento"],"readonly");
         var contenedor = transaccion.objectStore("departamento");
         //consultar toda la table
@@ -67,26 +73,28 @@
                 td.appendChild(document.createTextNode(cursor.value.descDepartamento));
                 tr.appendChild(td);
                 var td = document.createElement("td");
-                td.setAttribute("class","images");
                 if(cursor.value.estadoDepartamento === "alta"){
-                    td.appendChild("<img src='img/alta.png'>");
+                    td.innerHTML = "<img src='img/alta.png' class='images'>";
                     tr.appendChild(td);
                 }else{
-                    td.appendChild("<img src='img/baja.png'>");
+                    td.innerHTML = "<img src='img/baja.png' class='images'>";
                     tr.appendChild(td);
                 }
                 var td = document.createElement("td");
-                td.appendChild("<a href='ejercicioDetalles'><img src='img/ver.png'></a>");
+                td.innerHTML = "<a href='ejercicioDetalles'><img src='img/ver.png' class='images' title='Más detalles'></a>";
                 tr.appendChild(td);
                 var td = document.createElement("td");
-                td.appendChild("<a href='ejercicioEditar'><img src='img/editar.png'></a>");
+                td.innerHTML = "<a href='ejercicioEditar'><img src='img/editar.png' class='images' title='Editar'></a>";
                 tr.appendChild(td);
                 var td = document.createElement("td");
-                td.appendChild("<a href='ejercicioBorrar'><img src='img/borrar.png'></a>");
+                td.innerHTML = "<button id='" + cursor.value.codDepartamento + "'><img src='img/borrar.png' class='images' title='Eliminar'></button>";
                 tr.appendChild(td);
+                
+                
                 
                 tr.appendChild(td);
                 tbody.appendChild(tr);
+                document.getElementById(cursor.value.codDepartamento).addEventListener('click',borrarKeyDB,false);
                 cursor.continue();
             } 
         };

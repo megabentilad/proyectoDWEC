@@ -56,7 +56,7 @@ function validarDecimal(numero, obligatorio = 0, min = Number.MIN_VALUE, max = N
         return mensajeError;
     }else{
         numero = parseFloat(numero);
-        if(numero.isNaN() || numero < min || numero > max){
+        if(isNaN(numero) || numero < min || numero > max){
             mensajeError = "El valor debe ser un número entre el " + min + " y el " + max;
         }
     }
